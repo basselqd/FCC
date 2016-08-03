@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 These are MagLua scripts to run ompi simulations of FCC array of maghemite nanoparticles.
 MagLua is a scripting language developed by Jason Mercer based on Lua language as a scripting interface with subroutines written in C/C++.
 MagLua can be found at https://github.com/jasonimercer/maglua
@@ -11,6 +12,19 @@ Excuting initial Job with defaul equilibration time can be done similar to: mpir
 Excuting from a saved point can be done in the form: mpirun -np 512 maglua A.lua load $T again $t final
 Where "load $T" is to load from a saved point at temperature $T. Add "again $t" to extend equilibration to the value $t (in time unites).
 Add final in case the saved point was the last saved equilibration point saved at $T (the files have names like "SSS$T.f.$rank.dat")
+=======
+The file "MKT.lua" will generate the tensors of dipole interactions (8x8x8_fcc.lua)
+"A.lua" is the main file
+These scripts require MagLua r-307 https://github.com/jasonimercer/maglua/tree/r307
+Excuting jobs is in the form:
+
+mpirun -np 512 maglua A.lua load $T again $t final
+
+# load $T to load SSS$T.rank.dat, again $t to extend relaxation at T till time=$t, add "final" option to load SSS$T.f.rank.dat
+# arguments places should be as mentioned
+# to run defaults command is only:
+#mpirun -np 512 maglua A.lua
+>>>>>>> 6a60c7f21241ecde9ca3ec900d0a1ada2aa48fdc
 
 
 
