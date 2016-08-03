@@ -1,6 +1,6 @@
 The file "MKT.lua" will generate the tensors of dipole interactions (8x8x8_fcc.lua)
 "A.lua" is the main file
-These scripts require MagLua r-307
+These scripts require MagLua r-307 https://github.com/jasonimercer/maglua/tree/r307
 Excuting jobs is in the form:
 
 mpirun -np 512 maglua A.lua load $T again $t final
